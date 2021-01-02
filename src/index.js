@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const title = React.createElement('h1', null, 'JSX TEST');
+const text = React.createElement('p', null, 'paragraph Text~');
+const container = React.createElement('div', null, [title, text]);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  container,
   document.getElementById('root')
 );
 
