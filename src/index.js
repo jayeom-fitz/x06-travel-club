@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const title = React.createElement('h1', null, 'JSX TEST');
-const text = React.createElement('p', null, 'paragraph Text~');
-const container = React.createElement('div', null, [title, text]);
-
 ReactDOM.render(
-  container,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
