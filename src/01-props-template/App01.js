@@ -15,13 +15,28 @@ class App01 extends React.Component {
     };
   }
   
+  onSearchTitle(title) {
+    const updateList = Books.filter(book => {
+      return book.title.toLowerCase().search(title.toLowerCase()) !== -1;
+    });
+    this.setState({
+      books : updateList,
+    });
+  }
+
+  onSelectedBook(book) {
+    this.setState({
+      selectedBook : book,
+    });
+  }
+
   render() {
     return(
       <Container>
-        <SearchBar />
+        <SearchBar onSearchTitle={this.onSearchTitle.bind(this)}/>
         <Grid container spacing={2}>
           <Grid item>
-            <BookList books={this.state.books}/>
+            <BookList books={this.state.books} onSelectedBook={this.onSelectedBook.bind(this)}/>
           </Grid>
           <Grid item>
             <BookDetail book={this.state.selectedBook} />
