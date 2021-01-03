@@ -8,7 +8,7 @@ class BookList extends React.Component {
     const { books } = this.props;
 
     return(
-      <Container maxWidth='sm'>
+      <Container>
         <List>
           {books.map(book =>
             <ListItem>
