@@ -7,8 +7,8 @@ class App extends React.Component {
   render() {
     return(
       <>
-        <App02 />
         <App01 />
+        <App02 />
       </>
     );
   }
